@@ -2,36 +2,52 @@ import java.util.Scanner;
 
 
 public class Configuration {
-    private int num;
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Welcome to the Ticketing System");
-
-        int TotalNumOfTickets = scanner.nextInt();
-        System.out.print("Enter the total number of tickets to be in");
-
-        int TicketReleaseRate = scanner.nextInt();
-        System.out.print("Enter ticket release rate");
-
-        int customerRetrievalRate = scanner.nextInt();
-        System.out.print("Enter the customer retrieval rate");
-
-        int maxTicketCapacity = scanner.nextInt();
-        System.out.print("Enter the ticket capacity");
+    protected int TotalNumOfTickets;
+    protected int TicketReleaseRate;
+    protected int customerRetrievalRate;
+    protected int maxTicketCapacity;
 
 
-
-
-
-
-
-
+    public Configuration() {
     }
 
+    public Configuration(int TotalNumOfTickets,int TicketReleaseRate,int customerRetrievalRate,int maxTicketCapacity ) {
+         this.TotalNumOfTickets = TotalNumOfTickets;
+         this.TicketReleaseRate = TicketReleaseRate;
+         this.customerRetrievalRate = customerRetrievalRate;
+         this.maxTicketCapacity = maxTicketCapacity;
+    }
 
+    public void setCustomerRetrievalRate(int customerRetrievalRate) {
+        this.customerRetrievalRate = customerRetrievalRate;
+    }
 
+    public void setMaxTicketCapacity(int maxTicketCapacity) {
+        this.maxTicketCapacity = maxTicketCapacity;
+    }
 
+    public void setTicketReleaseRate(int ticketReleaseRate) {
+        TicketReleaseRate = ticketReleaseRate;
+    }
+
+    public void setTotalNumOfTickets(int totalNumOfTickets) {
+        TotalNumOfTickets = totalNumOfTickets;
+    }
+
+    public int getCustomerRetrievalRate() {
+        return customerRetrievalRate;
+    }
+
+    public int getMaxTicketCapacity() {
+        return maxTicketCapacity;
+    }
+
+    public int getTicketReleaseRate() {
+        return TicketReleaseRate;
+    }
+
+    public int getTotalNumOfTickets() {
+        return TotalNumOfTickets;
+    }
 }
 
